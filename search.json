@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Hello World\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kangju Sun",
+    "section": "",
+    "text": "Hi, I’m Kangju Sun. I am currently a Master of Data Science student at the University of British Columbia.\nI studied Mathematics at UBC before starting the MDS program. I am interested in data analysis, statistics, and practical applications of data science.\nThis website will include some of my work and experiences during the MDS program."
+  },
+  {
+    "objectID": "posts/hello-world/index.html",
+    "href": "posts/hello-world/index.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "My first few weeks in the MDS program have been busy. There are many new courses, assignments, and tools, so I am still getting used to the pace.\nOne big change for me is using Git, GitHub, R, Python, and Quarto much more often. My undergraduate background is in Mathematics, so some of these tools are still new to me.\nThe first few weeks have been challenging, but I am slowly getting more comfortable with the program. I hope I can become faster with the technical tools and focus more on data science as the program continues."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My name is Kangju Sun. I studied Mathematics at UBC and I am currently a Master of Data Science student.\nI have experience with Python, R, Excel, and SQL. I am interested in data science, statistics, and data analysis.\nI hope to use this website to record some of my work and experiences during the MDS program."
+  }
+]
