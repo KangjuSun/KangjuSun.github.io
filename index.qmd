@@ -1,0 +1,11 @@
+---
+title: "Kangju Sun"
+---
+
+![](images/profile.jpg){width=220}
+
+Hi, I'm Kangju Sun. I am currently a Master of Data Science student at the University of British Columbia.
+
+I studied Mathematics at UBC before starting the MDS program. I am interested in data analysis, statistics, and practical applications of data science.
+
+This website will include some of my work and experiences during the MDS program.

@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+My name is Kangju Sun. I studied Mathematics at UBC and I am currently a Master of Data Science student.
+
+I have experience with Python, R, Excel, and SQL. I am interested in data science, statistics, and data analysis.
+
+I hope to use this website to record some of my work and experiences during the MDS program.
