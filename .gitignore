@@ -1,3 +1,8 @@
 /.quarto/
 **/*.quarto_ipynb
 .venv/
+
+_site/
+.DS_Store
+
+.Rhistory

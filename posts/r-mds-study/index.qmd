@@ -1,22 +1,20 @@
 ---
 title: "Two Months of Pool Practice"
+author: "Kangju Sun"
 date: 2026-09-26
 categories: [R, Pool, Personal]
 ---
 
 ## Getting Back to Pool
 
-After finishing my undergraduate courses, I had about two months of free time. I started playing pool more regularly again.
+After finishing my undergraduate courses, I had about two months of free time and started playing pool more regularly again.
 
-I was curious whether spending more time practicing each week would be related to how I performed in my weekly games. I created a small dataset representing eight weeks of practice and competition results.
+I was curious whether spending more time practicing each week would be related to how I performed in my weekly games.
+
+Data source: I created this small example dataset based on my pool-practice routine during that period. [View the data](pool_practice.csv).
 
 ```{r}
-pool_data <- data.frame(
-  week = 1:8,
-  practice_hours = c(4, 6, 5, 8, 10, 7, 12, 11),
-  matches_won = c(1, 2, 1, 3, 4, 3, 5, 4)
-)
-
+pool_data <- read.csv("pool_practice.csv")
 pool_data
 ```
 
@@ -42,11 +40,14 @@ To see whether practice time and competition results moved together, I calculate
 cor(pool_data$practice_hours, pool_data$matches_won)
 ```
 
-A positive correlation would mean that weeks with more practice tended to also have better competition results.
+The correlation is positive, so in this small dataset, weeks with more practice generally also had better competition results.
 
 ## Visualizing the Relationship
 
 ```{r}
+#| label: fig-pool-practice
+#| fig-cap: "Weekly pool practice time and matches won"
+
 plot(
   pool_data$practice_hours,
   pool_data$matches_won,
@@ -61,6 +62,6 @@ abline(
 )
 ```
 
-The plot suggests a positive relationship between practice time and matches won. In this small example, the weeks when I practiced more generally also had better results.
+The plot also suggests a positive relationship between practice time and matches won.
 
 Of course, practice time is not the only thing that affects a pool match. Opponents, concentration, and how I played on that particular day could also matter.

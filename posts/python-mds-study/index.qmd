@@ -1,54 +1,58 @@
 ---
 title: "My MDS Study Plan"
+author: "Kangju Sun"
 date: 2026-09-25
 categories: [Python, MDS]
 jupyter: python3
 ---
+
 ## My Study Plan
 
-I made a small example study plan for the first four courses in my MDS program.
+I made this small dataset from my current MDS weekly schedule and my own rough estimates of study time.
+
+Data source: I created the dataset myself. [View the data](study_plan.csv).
 
 ```{python}
 import pandas as pd
 
-study = pd.DataFrame({
-    "day": [
-        "Mon", "Mon",
-        "Tue", "Tue",
-        "Wed", "Wed",
-        "Thu", "Thu",
-        "Fri", "Fri", "Fri", "Fri",
-        "Sat", "Sat", "Sat", "Sat"],
-    "course": [
-        "DSCI 521", "DSCI 551",
-        "DSCI 511", "DSCI 523",
-        "DSCI 521", "DSCI 551",
-        "DSCI 511", "DSCI 523",
-        "DSCI 511", "DSCI 521", "DSCI 523", "DSCI 551",
-        "DSCI 511", "DSCI 521", "DSCI 523", "DSCI 551"],
-    "hours": [
-        3.5, 4.5,
-        3.5, 4.5,
-        3.5, 4.5,
-        3.5, 4.5,
-        2, 2, 2, 2,
-        2, 2, 2, 2]})
+study = pd.read_csv("study_plan.csv")
 study
 ```
 
 ## Average Daily Study Time
+
+First, I calculated my total study time for each day and the average across the week.
+
 ```{python}
 daily_hours = study.groupby("day")["hours"].sum().reindex(
-    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"])
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+)
+
 daily_hours.mean()
+```
+
+## Study Time by Course
+
+I also checked how many hours I planned to spend on each course during the week.
+
+```{python}
+course_hours = study.groupby("course")["hours"].sum()
+course_hours
 ```
 
 ## Daily Study Time
 
 ```{python}
+#| label: fig-daily-study
+#| fig-cap: "Estimated study hours for each day of my MDS week"
+#| warning: false
+
 import matplotlib.pyplot as plt
 
 plt.bar(daily_hours.index, daily_hours)
 plt.ylabel("Hours per Day")
+plt.xlabel("Day")
 plt.show()
 ```
+
+My plan gives me about the same total study time on each study day. The course totals are also fairly balanced, although the actual time can change depending on assignments and quizzes.
