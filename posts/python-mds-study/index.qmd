@@ -1,0 +1,54 @@
+---
+title: "My MDS Study Plan"
+date: 2026-09-25
+categories: [Python, MDS]
+jupyter: python3
+---
+## My Study Plan
+
+I made a small example study plan for the first four courses in my MDS program.
+
+```{python}
+import pandas as pd
+
+study = pd.DataFrame({
+    "day": [
+        "Mon", "Mon",
+        "Tue", "Tue",
+        "Wed", "Wed",
+        "Thu", "Thu",
+        "Fri", "Fri", "Fri", "Fri",
+        "Sat", "Sat", "Sat", "Sat"],
+    "course": [
+        "DSCI 521", "DSCI 551",
+        "DSCI 511", "DSCI 523",
+        "DSCI 521", "DSCI 551",
+        "DSCI 511", "DSCI 523",
+        "DSCI 511", "DSCI 521", "DSCI 523", "DSCI 551",
+        "DSCI 511", "DSCI 521", "DSCI 523", "DSCI 551"],
+    "hours": [
+        3.5, 4.5,
+        3.5, 4.5,
+        3.5, 4.5,
+        3.5, 4.5,
+        2, 2, 2, 2,
+        2, 2, 2, 2]})
+study
+```
+
+## Average Daily Study Time
+```{python}
+daily_hours = study.groupby("day")["hours"].sum().reindex(
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"])
+daily_hours.mean()
+```
+
+## Daily Study Time
+
+```{python}
+import matplotlib.pyplot as plt
+
+plt.bar(daily_hours.index, daily_hours)
+plt.ylabel("Hours per Day")
+plt.show()
+```
