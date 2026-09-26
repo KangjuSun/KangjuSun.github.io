@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="my-study-plan">My Study Plan</h2>
 <p>I made this small dataset from my current MDS weekly schedule and my own rough estimates of study time.</p>
 <p>Data source: I created the dataset myself. <a href="study_plan.csv">View the data</a>.</p>
-<div id="a5829df1" class="cell" data-execution_count="1">
+<div id="da08cbd0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>study <span class="op">=</span> pd.read_csv(<span class="st">"study_plan.csv"</span>)</span>
@@ -337,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="average-daily-study-time" class="level2">
 <h2 class="anchored" data-anchor-id="average-daily-study-time">Average Daily Study Time</h2>
 <p>First, I calculated my total study time for each day and the average across the week.</p>
-<div id="0b600a10" class="cell" data-execution_count="2">
+<div id="07bcc4f0" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>daily_hours <span class="op">=</span> study.groupby(<span class="st">"day"</span>)[<span class="st">"hours"</span>].<span class="bu">sum</span>().reindex(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -351,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="study-time-by-course" class="level2">
 <h2 class="anchored" data-anchor-id="study-time-by-course">Study Time by Course</h2>
 <p>I also checked how many hours I planned to spend on each course during the week.</p>
-<div id="b6d3821e" class="cell" data-execution_count="3">
+<div id="1cee2dbe" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>course_hours <span class="op">=</span> study.groupby(<span class="st">"course"</span>)[<span class="st">"hours"</span>].<span class="bu">sum</span>()</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>course_hours</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -386,7 +386,8 @@ Figure&nbsp;1: Estimated study hours for each day of my MDS week
 </div>
 </div>
 </div>
-<p>My plan gives me about the same total study time on each study day. The course totals are also fairly balanced, although the actual time can change depending on assignments and quizzes.</p>
+<p>My plan gives me about the same total study time on each study day. The course totals are also fairly balanced, although the actual time can change depending on assignments and quizzes. ## AI Use</p>
+<p>I used <a href="https://chatgpt.com/">ChatGPT</a> to help troubleshoot code and review the wording and structure of this post. I reviewed and tested the final code and content myself.</p>
 
 
 </section>

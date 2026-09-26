@@ -56,3 +56,6 @@ plt.show()
 ```
 
 My plan gives me about the same total study time on each study day. The course totals are also fairly balanced, although the actual time can change depending on assignments and quizzes.
+## AI Use
+
+I used [ChatGPT](https://chatgpt.com/) to help troubleshoot code and review the wording and structure of this post. I reviewed and tested the final code and content myself.

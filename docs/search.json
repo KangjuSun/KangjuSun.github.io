@@ -49,6 +49,13 @@
     "text": "Visualizing the Relationship\n\nplot(\n  pool_data$practice_hours,\n  pool_data$matches_won,\n  xlab = \"Practice Hours per Week\",\n  ylab = \"Matches Won\",\n  main = \"Pool Practice and Weekly Results\",\n  pch = 19\n)\n\nabline(\n  lm(matches_won ~ practice_hours, data = pool_data)\n)\n\n\n\n\n\n\n\nFigure 1: Weekly pool practice time and matches won\n\n\n\n\n\nThe plot also suggests a positive relationship between practice time and matches won.\nOf course, practice time is not the only thing that affects a pool match. Opponents, concentration, and how I played on that particular day could also matter."
   },
   {
+    "objectID": "posts/r-mds-study/index.html#ai-use",
+    "href": "posts/r-mds-study/index.html#ai-use",
+    "title": "Two Months of Pool Practice",
+    "section": "AI Use",
+    "text": "AI Use\nI used ChatGPT to help troubleshoot code and review the wording and structure of this post. I reviewed and tested the final code and content myself."
+  },
+  {
     "objectID": "posts/python-mds-study/index.html",
     "href": "posts/python-mds-study/index.html",
     "title": "My MDS Study Plan",
@@ -81,7 +88,7 @@
     "href": "posts/python-mds-study/index.html#daily-study-time",
     "title": "My MDS Study Plan",
     "section": "Daily Study Time",
-    "text": "Daily Study Time\n\nimport matplotlib.pyplot as plt\n\nplt.bar(daily_hours.index, daily_hours)\nplt.ylabel(\"Hours per Day\")\nplt.xlabel(\"Day\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Estimated study hours for each day of my MDS week\n\n\n\n\n\nMy plan gives me about the same total study time on each study day. The course totals are also fairly balanced, although the actual time can change depending on assignments and quizzes."
+    "text": "Daily Study Time\n\nimport matplotlib.pyplot as plt\n\nplt.bar(daily_hours.index, daily_hours)\nplt.ylabel(\"Hours per Day\")\nplt.xlabel(\"Day\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Estimated study hours for each day of my MDS week\n\n\n\n\n\nMy plan gives me about the same total study time on each study day. The course totals are also fairly balanced, although the actual time can change depending on assignments and quizzes. ## AI Use\nI used ChatGPT to help troubleshoot code and review the wording and structure of this post. I reviewed and tested the final code and content myself."
   },
   {
     "objectID": "posts/hello-world/index.html",

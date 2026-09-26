@@ -65,3 +65,7 @@ abline(
 The plot also suggests a positive relationship between practice time and matches won.
 
 Of course, practice time is not the only thing that affects a pool match. Opponents, concentration, and how I played on that particular day could also matter.
+
+## AI Use
+
+I used [ChatGPT](https://chatgpt.com/) to help troubleshoot code and review the wording and structure of this post. I reviewed and tested the final code and content myself.
